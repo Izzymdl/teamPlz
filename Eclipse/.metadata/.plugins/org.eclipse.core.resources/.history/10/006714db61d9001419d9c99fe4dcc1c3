@@ -8,8 +8,6 @@ public class guiProj {
 
 	private static Map<String, String> myData;
 	
-	private JFrame myFrame;
-	private JLabel
 	
 	public guiProj(){
 		

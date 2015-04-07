@@ -231,6 +231,9 @@ public class guiProj {
 				myFrame.setVisible(false);
 			}});
 	}
+	public Set<String> getUsers(){
+		return myData.keySet();
+	}
 	public static void main(String[] args)
 	{
 		SwingUtilities.invokeLater(new Runnable() {

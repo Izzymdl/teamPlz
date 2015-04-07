@@ -1,0 +1,47 @@
+import java.awt.*;
+import java.util.*;
+
+import javax.swing.*;
+
+
+
+public class guiProj {
+
+	private static Map<String, String> myData;
+	private JFrame myFrame = new JFrame();
+	
+	private JTextField ufield;
+	private JTextField mfield;
+	private JButton submit;
+	
+	private JTextField search;
+	private JButton enter;
+	
+	private JTextArea mess;
+	private JButton exit;
+	
+	public guiProj(){
+		myData = new TreeMap<String, String>();
+		
+		myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		myFrame.setPreferredSize(new Dimension(275, 150));
+		
+		ufield = new JTextField("Enter Username");
+		mfield = new JTextField("Message Here");
+		submit = new JButton("Submit");
+		
+		search = new JTextField("Find User");
+		enter = new JButton("Search");
+		
+		mess = new JTextArea();
+		exit = new JButton("Exit");
+	
+	}
+	public static void main(String[] args)
+	{
+		SwingUtilities.invokeLater(new Runnable() {
+			public void run() { new guiProj(); }
+		});
+	}
+
+}

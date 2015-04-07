@@ -1,0 +1,96 @@
+import java.awt.*;
+import java.util.*;
+
+import javax.swing.*;
+
+
+
+public class guiProj {
+
+//	private static Map<String, String> myData;
+	private JFrame myFrame;
+	
+	
+	private JTextField ufield;
+	private JTextField mfield;
+	private JButton submit;
+	
+	private JTextField search;
+	private JButton enter;
+	
+	private JTextArea mess;
+	private JButton exit;
+	
+	public guiProj(){
+		//myData = new TreeMap<String, String>();
+		
+		myFrame = new JFrame("Froot");
+		myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		myFrame.setPreferredSize(new Dimension(400, 350));
+		
+	
+		
+		ufield = new JTextField("Enter Username");
+		mfield = new JTextField("Message Here");
+		submit = new JButton("Submit");
+		
+		search = new JTextField("Find User");
+		enter = new JButton("Search");
+		
+		mess = new JTextArea();
+		exit = new JButton("Exit");
+		
+		
+		ufield.setPreferredSize(new Dimension(200, 30));
+		ufield.setMaximumSize(new Dimension(200, 30));
+		mfield.setPreferredSize(new Dimension(200, 30));
+		mfield.setMaximumSize(new Dimension(200, 30));
+		search.setPreferredSize(new Dimension(200, 30));
+		search.setMaximumSize(new Dimension(200, 30));
+		
+		Box mainBox = Box.createVerticalBox();
+		
+		Box box1 = Box.createHorizontalBox();
+			Box ib1 = Box.createVerticalBox();
+		Box box2 = Box.createHorizontalBox();
+		Box box3 = Box.createHorizontalBox();
+			Box ib2 = Box.createVerticalBox();
+		
+		
+		ib1.add(Box.createVerticalStrut(50));
+		ib1.add(ufield);
+		ib1.add(mfield);
+		ib1.add(Box.createVerticalStrut(10));
+		ib1.add(submit);
+		ib1.add(Box.createVerticalStrut(20));
+		
+		box1.add(Box.createHorizontalStrut(150));
+		box1.add(ib1);
+		
+		box2.add(search);
+		box2.add(enter);
+		
+		ib2.add(mess);
+		ib2.add(exit);
+		box3.add(ib2);
+		
+		mainBox.add(box1);
+		mainBox.add(box2);
+		mainBox.add(box3);
+		
+		
+		myFrame.add(mainBox);
+		myFrame.pack();
+		myFrame.setLocationRelativeTo(null);
+		myFrame.setVisible(true);
+		
+		
+	}
+	public static void main(String[] args)
+	{
+		SwingUtilities.invokeLater(new Runnable() {
+			public void run() { new guiProj(); }
+		});
+	}
+
+}

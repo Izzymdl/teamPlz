@@ -1,0 +1,28 @@
+import java.util.*;
+
+import javax.swing.*;
+
+
+
+public class guiProj {
+
+	private static Map<String, String> myData;
+	
+	private JFrame myFrame;
+	
+	private JTextField ufield;
+	private JTextField mfield;
+	
+	private ;
+	
+	public guiProj(){
+		myData = new TreeMap<String, String>();
+	}
+	public static void main(String[] args)
+	{
+		SwingUtilities.invokeLater(new Runnable() {
+			public void run() { new guiProj(); }
+		});
+	}
+
+}
